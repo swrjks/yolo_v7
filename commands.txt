@@ -1,0 +1,27 @@
+Step 1: Open Terminal in the YOLOv7 Folder
+	C:\Users\swara\Desktop\yolo\yolov7-main
+
+Step 2: Reactivate the Virtual Environment
+	yolov7_env\Scripts\activate
+
+Step 3: Verify the Environment
+	python -c "import torch; print(torch.cuda.is_available())"
+
+Step 4: Run YOLOv7 Inference
+	For an image:
+	python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/images/classroompics --device 0
+	
+	For a video:
+	python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/videos/vid1.mp4 --device 0
+
+
+
+Command for Webcam Inference on GPU
+	python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source 0 --device 0
+
+To Stop the Webcam
+Press q in the detection window to stop the live feed and exit.
+
+
+python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source C:\Users\swara\Downloads\Assemply.mp4 --device 0
+"C:\Users\swara\Downloads\Assemply.mp4"
